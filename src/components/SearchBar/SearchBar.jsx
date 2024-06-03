@@ -10,8 +10,10 @@ export default function SearchBar({ onSearch }) {
 
     if (searchImg.trim() === "") {
       toast("Please fill in search folder", {
+        icon: "✕",
+        position: "top-right",
         style: {
-          color: 'red',   
+          color: "red",
         },
       });
       return;
@@ -28,9 +30,9 @@ export default function SearchBar({ onSearch }) {
           className={css.input}
           type="text"
           name="searchImg"
-           autoComplete="off"
+          autoComplete="off"
           autoFocus
-          placeholder="Search images and photos"
+          placeholder="Search images..."
         />
         <button className={css.btn} type="submit">
           Search

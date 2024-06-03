@@ -1,6 +1,6 @@
 import css from "./ImageCard.module.css";
 
-export default function ImageCard({ imgLink: { small, regular }, imgSlug, onClick }) {
+export default function ImageCard({ imgLink: { small}, imgSlug, onClick }) {
   const handleClick = () => {
     onClick(small);
    

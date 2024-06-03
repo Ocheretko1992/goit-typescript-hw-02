@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import ImageGallery from "./ImageGallery/ImageGallery";
 import { getImages } from "./img-api";
@@ -8,8 +7,6 @@ import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./ImageModal/ImageModal";
 
-
-
 export default function App() {
   const [images, setImages] = useState([]);
   const [error, setError] = useState(false);
@@ -17,24 +14,22 @@ export default function App() {
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [totalPage, setTotalPage] = useState(false);
- const [modalIsOpen, setModalIsOpen] = useState(false);
- const [selectedImageUrl, setSelectedImageUrl] = useState("");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImageUrl, setSelectedImageUrl] = useState("");
 
-  
   useEffect(() => {
     if (searchQuery.trim() === "") {
       return;
     }
-  
+
     async function fetchImages() {
       try {
         setLoading(true);
         setError(false);
         const { results, total } = await getImages(searchQuery, page);
-       
+
         setImages((prevState) => [...prevState, ...results]);
-         setTotalPage(page < Math.ceil(total / 15));
-        
+        setTotalPage(page < Math.ceil(total / 15));
       } catch (error) {
         setError(true);
       } finally {
@@ -53,19 +48,17 @@ export default function App() {
 
   const hendleLoadMore = async () => {
     setPage(page + 1);
-   
   };
-// modal
-    const openModal = (imageUrl) => {
-      setSelectedImageUrl(imageUrl);
-      setModalIsOpen(true);
-    };
+  //* modal=====================================================================================
+  const openModal = (imageUrl) => {
+    setSelectedImageUrl(imageUrl);
+    setModalIsOpen(true);
+  };
 
   const closeModal = () => {
-      setSelectedImageUrl("");
-      setModalIsOpen(false);
+    setSelectedImageUrl("");
+    setModalIsOpen(false);
   };
-
 
   return (
     <div>
@@ -80,7 +73,6 @@ export default function App() {
 
       {loading && <Loader />}
 
-   
       <ImageModal
         isOpen={modalIsOpen}
         onClose={closeModal}
