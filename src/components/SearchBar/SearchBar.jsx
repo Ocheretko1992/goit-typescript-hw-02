@@ -9,7 +9,7 @@ export default function SearchBar({ onSearch }) {
     const searchImg = form.elements.searchImg.value;
 
     if (searchImg.trim() === "") {
-      toast("Please fill in search folder", {
+      toast("Please fill in search form", {
         icon: "✕",
         position: "top-right",
         style: {
