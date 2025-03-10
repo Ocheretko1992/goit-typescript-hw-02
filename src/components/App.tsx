@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ImageGallery from "./ImageGallery/ImageGallery";
 import { getImages } from "./img-api";
-import SearchBar from "./SearchBar/SearchBar";
 import Loader from "./Loader/Loader";
+import SearchBar from "./SearchBar/SearchBar";
+import ImageGallery from "./ImageGallery/ImageGallery";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./ImageModal/ImageModal";
