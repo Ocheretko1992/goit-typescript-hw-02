@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { getImages } from "./img-api";
 import SearchBar from "./SearchBar/SearchBar";
 import ImageGallery from "./ImageGallery/ImageGallery";
 import ImageModal from "./ImageModal/ImageModal";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import Loader from "./Loader/Loader";
+import getImages from "./img-api";
 interface Img {
   id:number;
   urls:{small:string}

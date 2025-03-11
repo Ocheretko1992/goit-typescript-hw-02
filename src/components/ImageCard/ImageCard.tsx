@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import css from './ImageCard.module.css';
 
- interface ImageCardProps {
+interface ImageCardProps {
   urls: {small:string};
   imgSlug: string;
   onClick: (imageUrl: string) => void;
