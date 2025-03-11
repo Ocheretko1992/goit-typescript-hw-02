@@ -6,7 +6,7 @@ import ImageModal from "./ImageModal/ImageModal";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import Loader from "./Loader/Loader";
-export interface Img {
+interface Img {
   id:number;
   urls:{small:string}
   slug:string
