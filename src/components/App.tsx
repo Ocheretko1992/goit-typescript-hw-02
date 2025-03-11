@@ -55,7 +55,7 @@ export default function App() {
   const hendleLoadMore = async () => {
     setPage(page + 1);
   };
-  //* modal=====================================================================================
+  //* modal========================================================================//
   const openModal = (imageUrl:string) => {
     setSelectedImageUrl(imageUrl);
     setModalIsOpen(true);
