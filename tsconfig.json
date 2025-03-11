@@ -11,6 +11,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "esModuleInterop": true,
   },
     "include": ["src"],
     "references": [{ "path": "./tsconfig.node.json" }]
