@@ -1,10 +1,6 @@
 import Img from "../../types";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
-interface FetchResult {
-  results:Img[];
-  total:number
-}
 interface ImageGalleryProp {
   items: Img[];
   onImageClick: (imageUrl: string) => void;
