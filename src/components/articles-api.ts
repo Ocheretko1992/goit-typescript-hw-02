@@ -10,7 +10,6 @@ const getArticles = async <T>(topic:string, currentPage:number):Promise<T> => {
       hitsPerPage: 5,
     },
   });
-
   return response.data.hits;
 };
 export default getArticles
