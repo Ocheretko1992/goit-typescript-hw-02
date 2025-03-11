@@ -3,13 +3,12 @@ import { getImages } from "./img-api";
 import SearchBar from "./SearchBar/SearchBar";
 import ImageGallery from "./ImageGallery/ImageGallery";
 import ImageModal from "./ImageModal/ImageModal";
-
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import Loader from "./Loader/Loader";
 export interface Img {
   id:number;
-  urls:string
+  urls:{small:string}
   slug:string
 }
 interface FetchResult {
